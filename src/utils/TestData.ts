@@ -1,9 +1,9 @@
 import { CardData } from "../types/CardData";
-import { v5 } from 'uuid';
+import { v4 } from 'uuid';
 
 export const USER_DATA: CardData[] = [
     {
-        id: v5.DNS,
+        id: v4(),
         userTag: 'FakeName',
         userId: '@fakeName',
         date: new Date(),
@@ -13,7 +13,7 @@ export const USER_DATA: CardData[] = [
         shareCount: 30
     },
     {
-        id: v5.DNS,
+        id: v4(),
         userTag: 'BoringPersonOne',
         userId: '@boringPersonOne',
         date: new Date(),
@@ -23,7 +23,7 @@ export const USER_DATA: CardData[] = [
         shareCount: 30
     },
     {
-        id: v5.DNS,
+        id: v4(),
         userTag: 'BoringPersonTwo',
         userId: '@boringPersonTwo',
         date: new Date(),
