@@ -1,15 +1,21 @@
 import React from "react";
 import "./Card.scss";
+import { CardData } from "../../types/CardData";
+import Header from "./Header/Header";
+import Body from "./Body/Body";
+import Footer from "./Footer/Footer";
 
-interface Prop {}
+interface Prop {
+  userData: CardData;
+}
 
-const Card: React.FC<Prop> = () => {
+const Card: React.FC<Prop> = ({ userData }) => {
+  const { id, userId, userTag, date, message, replyCount, favoriteCount, shareCount } = userData;
   return (
     <div className="card__container">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-      perferendis ex laboriosam numquam nisi, exercitationem laudantium voluptas
-      pariatur at animi voluptates officia officiis, repudiandae quae facilis in
-      nemo, alias eius.
+      <Header userId={userId} userTag={userTag} date={date} />
+      <Body message={message} />
+      <Footer replyCount={replyCount} favoriteCount={favoriteCount} shareCount={shareCount} />
     </div>
   );
 };
