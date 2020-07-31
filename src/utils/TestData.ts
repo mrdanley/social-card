@@ -1,4 +1,4 @@
-import { CardData } from "../types/CardData";
+import { CardData } from '../types/CardData';
 import { v4 } from 'uuid';
 
 export const USER_DATA: CardData[] = [
@@ -32,4 +32,4 @@ export const USER_DATA: CardData[] = [
         favoriteCount: 20,
         shareCount: 30
     }
-]
+];
